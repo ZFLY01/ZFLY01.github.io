@@ -1,0 +1,36 @@
+{
+  "name": "黄建勋",
+  "role": "视觉设计师 · Visual Designer",
+  "heroLine1": "你好，我是黄建勋。",
+  "heroLine2": "以设计书写品牌的故事。",
+  "heroSub": "我是一名专注品牌视觉与数字体验的独立设计师。过去 6 年，为 40+ 品牌打造令人难忘的视觉语言——从一枚标志，到一整套可生长的设计系统。",
+  "heroTags": ["品牌视觉", "UI / UX", "插画与动态", "创意策略"],
+  "email": "hello@linshe.design",
+  "aboutTitle": "设计，是克制地表达",
+  "aboutLead": "我相信最好的设计往往不说太多，却让人过目不忘。它源于对问题的深刻理解，以及恰到好处的取舍。",
+  "aboutBody": [
+    "我在广州工作与生活，先后服务于品牌工作室与互联网团队，后成为独立设计师。我的工作横跨品牌视觉、数字界面与动态设计，习惯从策略出发，让美学服务于商业与体验。",
+    "对我来说，每个项目都是一次重新出发——理解行业的语言，找到属于它的视觉印记，再把它做成一套能够自我生长的系统。"
+  ],
+  "stats": [
+    { "num": "6", "label": "年经验" },
+    { "num": "40+", "label": "合作品牌" },
+    { "num": "12", "label": "项设计奖项" }
+  ],
+  "skills": [
+    { "name": "品牌视觉与 VI 系统", "lv": "Expert" },
+    { "name": "产品 UI / UX 设计", "lv": "Advanced" },
+    { "name": "商业插画与编辑设计", "lv": "Advanced" },
+    { "name": "动态视觉与动效", "lv": "Advanced" },
+    { "name": "设计系统与组件化", "lv": "Expert" }
+  ],
+  "works": [
+    { "no": "01", "title": "Aurora Coffee", "cat": "品牌", "img": "https://aka.doubaocdn.com/s/46ELMSVUJx", "year": "2024", "desc": "深绿咖啡品牌全案——标志、包装与物料系统的完整视觉体系。" },
+    { "no": "02", "title": "Vanta Finance", "cat": "数字", "img": "https://aka.doubaocdn.com/s/uRZenBLncP", "year": "2024", "desc": "面向年轻用户的金融管理应用，深色界面与数据可视化设计。" },
+    { "no": "03", "title": "山隐 · 山水系列", "cat": "插画", "img": "https://aka.doubaocdn.com/s/LrqbV37dks", "year": "2023", "desc": "以金绿设色的现代山水插画，探索传统水墨与现代图形的交融。" },
+    { "no": "04", "title": "雨夜霓虹", "cat": "摄影", "img": "https://aka.doubaocdn.com/s/i8uXYtBUBW", "year": "2023", "desc": "城市雨夜街景的纪实影像，捕捉霓虹与倒影之间的情绪光影。" },
+    { "no": "05", "title": "MONO 季刊", "cat": "编辑", "img": "https://aka.doubaocdn.com/s/iv03n9iUqg", "year": "2022", "desc": "时尚杂志的版式与装帧设计，建立持续而统一的视觉识别。" },
+    { "no": "06", "title": "ORO 标识系统", "cat": "品牌", "img": "https://aka.doubaocdn.com/s/VTmTt18QFX", "year": "2022", "desc": "几何极简的品牌标志系统，覆盖全场景物料的应用延展。" },
+    { "no": "07", "title": "流金 · 动态实验", "cat": "动态", "img": "https://aka.doubaocdn.com/s/zTBHFcCpCa", "year": "2021", "desc": "数字化动态视觉实验，金色粒子流在空间中的运动叙事。" }
+  ]
+}
