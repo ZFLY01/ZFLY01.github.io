@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>林澈 · 视觉设计师作品集</title>
-<meta name="description" content="林澈，独立视觉设计师，专注于品牌视觉、数字体验与插画动态。精选作品集。">
-<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@400;600;700;900&amp;family=Noto+Sans+SC:wght@300;400;500;700&amp;display=swap">
-<style>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="zh-CN"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;title&gt;黄建勋 · 视觉设计师作品集&lt;/title&gt;
+&lt;meta name="description" content="黄建勋，独立视觉设计师，专注于品牌视觉、数字体验与插画动态。精选作品集。"&gt;
+&lt;link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@400;600;700;900&amp;family=Noto+Sans+SC:wght@300;400;500;700&amp;display=swap"&gt;
+&lt;style&gt;
 :root{--ink:#0b100e;--ink-2:#101713;--ink-3:#16201b;--paper:#f2ede1;--paper-dim:#c9c3b4;--muted:#8a9188;--line:rgba(242,237,225,.14);--gold:#c9a66b;--gold-soft:rgba(201,166,107,.14);--serif:"Noto Serif SC",serif;--sans:"Noto Sans SC",-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;--ease:cubic-bezier(.22,1,.36,1);}
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
@@ -44,7 +44,7 @@ img{display:block;max-width:100%;}
 .hero-eyebrow{display:flex;align-items:center;gap:16px;font-size:12px;letter-spacing:.44em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:34px;opacity:0;animation:rise .9s var(--ease) .1s forwards;}
 .hero-eyebrow::before{content:"";width:44px;height:1px;background:var(--gold);}
 .hero-title{font-family:var(--serif);font-size:clamp(44px,8vw,96px);font-weight:900;line-height:1.12;letter-spacing:.02em;margin-bottom:12px;opacity:0;animation:rise .9s var(--ease) .25s forwards;}
-.hero-title em{font-style:normal;background:linear-gradient(100deg,var(--gold) 20%,#e8cf9c 55%,var(--gold) 90%);-webkit-background-clip:text;background-clip:text;color:transparent;}
+.hero-title .em{font-style:normal;background:linear-gradient(100deg,var(--gold) 20%,#e8cf9c 55%,var(--gold) 90%);-webkit-background-clip:text;background-clip:text;color:transparent;}
 .hero-sub{max-width:560px;font-size:clamp(15px,1.6vw,18px);color:var(--paper-dim);font-weight:300;margin-top:26px;opacity:0;animation:rise .9s var(--ease) .4s forwards;}
 .hero-meta{display:flex;flex-wrap:wrap;gap:12px;margin-top:42px;opacity:0;animation:rise .9s var(--ease) .55s forwards;}
 .hero-meta span{font-size:12px;letter-spacing:.18em;color:var(--paper-dim);border:1px solid var(--line);border-radius:999px;padding:8px 18px;background:rgba(11,16,14,.4);backdrop-filter:blur(6px);}
@@ -114,8 +114,57 @@ img{display:block;max-width:100%;}
 .footer{border-top:1px solid var(--line);padding:34px 0;}
 .footer-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
 .footer p{font-size:12.5px;color:var(--muted);letter-spacing:.06em;}
+.footer .foot-links{display:flex;align-items:center;gap:20px;}
 .footer .up{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.14em;color:var(--paper-dim);transition:color .3s;}
 .footer .up:hover{color:var(--gold);}
+.footer .admin-link{font-size:12px;letter-spacing:.12em;color:var(--muted);transition:color .3s;}
+.footer .admin-link:hover{color:var(--gold);}
+.admin{position:fixed;inset:0;z-index:200;background:var(--ink);overflow-y:auto;display:none;}
+.admin.show{display:block;}
+.admin-top{position:sticky;top:0;z-index:10;background:rgba(11,16,14,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);}
+.admin-top-inner{max-width:1080px;margin:0 auto;padding:16px 28px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.admin-top h2{font-family:var(--serif);font-size:20px;font-weight:700;display:flex;align-items:center;gap:10px;}
+.admin-top h2 .tag{font-size:10px;letter-spacing:.2em;color:var(--gold);border:1px solid var(--gold);border-radius:2px;padding:3px 8px;font-family:var(--sans);font-weight:400;}
+.admin-actions{display:flex;align-items:center;gap:12px;}
+.a-btn{font-size:13px;letter-spacing:.08em;padding:9px 18px;border-radius:6px;border:1px solid var(--line);color:var(--paper-dim);background:none;cursor:pointer;transition:all .3s;font-family:var(--sans);}
+.a-btn:hover{border-color:var(--gold);color:var(--gold);}
+.a-btn.solid{background:var(--gold);color:var(--ink);border-color:var(--gold);font-weight:500;}
+.a-btn.solid:hover{background:#d8b97e;color:var(--ink);}
+.a-btn.danger{color:#e08a7e;border-color:rgba(224,138,126,.4);}
+.a-btn.danger:hover{border-color:#e08a7e;color:#e08a7e;}
+.admin-body{max-width:1080px;margin:0 auto;padding:28px;padding-bottom:80px;}
+.admin-tabs{display:flex;gap:6px;border-bottom:1px solid var(--line);margin-bottom:28px;}
+.admin-tabs button{font-family:var(--sans);font-size:14px;letter-spacing:.06em;padding:12px 20px;background:none;border:none;border-bottom:2px solid transparent;color:var(--muted);cursor:pointer;transition:all .3s;}
+.admin-tabs button.active{color:var(--gold);border-bottom-color:var(--gold);}
+.a-panel{display:none;}
+.a-panel.show{display:block;}
+.a-field{margin-bottom:18px;}
+.a-field label{display:block;font-size:12.5px;letter-spacing:.1em;color:var(--muted);margin-bottom:8px;}
+.a-field input,.a-field textarea,.a-field select{width:100%;background:var(--ink-2);border:1px solid var(--line);color:var(--paper);font-family:var(--sans);font-size:14px;padding:11px 14px;border-radius:6px;transition:border-color .3s;outline:none;}
+.a-field input:focus,.a-field textarea:focus,.a-field select:focus{border-color:var(--gold);}
+.a-field textarea{min-height:88px;resize:vertical;line-height:1.6;}
+.a-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.a-card{border:1px solid var(--line);border-radius:8px;padding:20px;margin-bottom:20px;background:var(--ink-2);}
+.a-card-head{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:16px;}
+.a-card-head .t{font-family:var(--serif);font-size:17px;font-weight:600;}
+.a-card-head .m{font-size:11px;letter-spacing:.12em;color:var(--muted);}
+.a-card-ops{display:flex;gap:8px;flex-wrap:wrap;}
+.a-mini{font-size:12px;padding:6px 12px;border-radius:5px;border:1px solid var(--line);background:none;color:var(--paper-dim);cursor:pointer;transition:all .3s;font-family:var(--sans);}
+.a-mini:hover{border-color:var(--gold);color:var(--gold);}
+.a-mini.danger:hover{border-color:#e08a7e;color:#e08a7e;}
+.work-thumb{width:56px;height:70px;object-fit:cover;border-radius:4px;border:1px solid var(--line);flex:none;}
+.a-work-row{display:flex;align-items:center;gap:16px;padding:14px;border:1px solid var(--line);border-radius:8px;margin-bottom:12px;background:var(--ink-2);}
+.a-work-row .info{flex:1;min-width:0;}
+.a-work-row .info b{font-family:var(--serif);font-size:15px;font-weight:600;display:block;}
+.a-work-row .info span{font-size:12px;color:var(--muted);}
+.a-note{font-size:12.5px;color:var(--muted);background:var(--ink-2);border:1px dashed var(--line);border-radius:8px;padding:14px 18px;margin-bottom:24px;line-height:1.7;}
+.a-note b{color:var(--gold);font-weight:500;}
+.a-status{font-size:13px;padding:10px 16px;border-radius:6px;margin-top:14px;display:none;line-height:1.6;}
+.a-status.ok{display:block;background:rgba(201,166,107,.12);border:1px solid rgba(201,166,107,.4);color:var(--gold);}
+.a-status.err{display:block;background:rgba(224,138,126,.12);border:1px solid rgba(224,138,126,.4);color:#e08a7e;}
+.hint{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.6;}
+.upload-preview{display:flex;align-items:center;gap:12px;margin-top:10px;}
+.upload-preview img{width:60px;height:75px;object-fit:cover;border-radius:4px;border:1px solid var(--line);}
 @media(max-width:900px){
 .nav-links{position:fixed;inset:0;z-index:98;background:rgba(11,16,14,.97);backdrop-filter:blur(16px);flex-direction:column;justify-content:center;gap:30px;opacity:0;pointer-events:none;transition:opacity .4s var(--ease);}
 .nav-links.open{opacity:1;pointer-events:auto;}
@@ -127,6 +176,7 @@ img{display:block;max-width:100%;}
 .about-grid{grid-template-columns:1fr;gap:44px;}
 .svc-grid{grid-template-columns:1fr;}
 .stats{grid-template-columns:repeat(3,1fr);gap:14px;}
+.a-row{grid-template-columns:1fr;}
 }
 @media(max-width:600px){
 .gallery{grid-template-columns:1fr;}
@@ -139,127 +189,263 @@ html{scroll-behavior:auto;}
 *,*::before,*::after{animation:none!important;transition:none!important;}
 .work{opacity:1;transform:none;}
 }
-</style>
-</head>
-<body>
-<nav class="nav" id="nav">
-  <div class="wrap nav-inner">
-    <a class="brand" href="#top">林澈<span class="dot">.</span><small>Portfolio</small></a>
-    <div class="nav-links" id="navLinks">
-      <a href="#works">作品</a>
-      <a href="#about">关于</a>
-      <a href="#services">服务</a>
-      <a class="nav-cta" href="#contact">联系我</a>
-    </div>
-    <button class="burger" id="burger" aria-label="打开菜单" aria-expanded="false"><span></span><span></span><span></span></button>
-  </div>
-</nav>
-<header class="hero" id="top">
-  <div class="hero-bg"></div>
-  <div class="hero-inner">
-    <div class="hero-eyebrow">视觉设计师 · Visual Designer</div>
-    <h1 class="hero-title">你好，我是林澈。<br>以设计<em>书写品牌</em>的故事。</h1>
-    <p class="hero-sub">我是一名专注品牌视觉与数字体验的独立设计师。过去 6 年，为 40+ 品牌打造令人难忘的视觉语言——从一枚标志，到一整套可生长的设计系统。</p>
-    <div class="hero-meta"><span>品牌视觉</span><span>UI / UX</span><span>插画与动态</span><span>创意策略</span></div>
-  </div>
-  <div class="scroll-hint"><span>Scroll</span><span class="line"></span></div>
-</header>
-<main>
-<section class="works" id="works">
-  <div class="wrap">
-    <div class="gallery-head">
-      <div class="sec-head">
-        <div class="eyebrow">Selected Works</div>
-        <h2 class="sec-title">精选作品</h2>
-      </div>
-    </div>
-    <div class="filters" id="filters">
-      <button class="active" data-f="all">全部</button>
-      <button data-f="品牌">品牌</button>
-      <button data-f="数字">数字体验</button>
-      <button data-f="插画">插画</button>
-      <button data-f="摄影">摄影</button>
-      <button data-f="编辑">编辑设计</button>
-      <button data-f="动态">动态</button>
-    </div>
-    <div class="gallery" id="gallery"></div>
-  </div>
-</section>
-<section class="about" id="about">
-  <div class="wrap">
-    <div class="about-grid">
-      <div class="about-body">
-        <div class="eyebrow">About</div>
-        <h2 class="sec-title" style="margin-bottom:30px;">设计，是克制地表达</h2>
-        <p class="lead">我相信最好的设计往往不说太多，却让人过目不忘。它源于对问题的深刻理解，以及恰到好处的取舍。</p>
-        <p>我在广州工作与生活，先后服务于品牌工作室与互联网团队，后成为独立设计师。我的工作横跨<strong>品牌视觉、数字界面与动态设计</strong>，习惯从策略出发，让美学服务于商业与体验。</p>
-        <p>对我来说，每个项目都是一次重新出发——理解行业的语言，找到属于它的视觉印记，再把它做成一套能够自我生长的系统。</p>
-        <div class="stats">
-          <div class="stat"><b>6</b><span>年经验</span></div>
-          <div class="stat"><b>40+</b><span>合作品牌</span></div>
-          <div class="stat"><b>12</b><span>项设计奖项</span></div>
-        </div>
-      </div>
-      <div class="skills">
-        <h3>能力专长</h3>
-        <div class="skill"><span class="name">品牌视觉与 VI 系统</span><span class="lv">Expert</span></div>
-        <div class="skill"><span class="name">产品 UI / UX 设计</span><span class="lv">Advanced</span></div>
-        <div class="skill"><span class="name">商业插画与编辑设计</span><span class="lv">Advanced</span></div>
-        <div class="skill"><span class="name">动态视觉与动效</span><span class="lv">Advanced</span></div>
-        <div class="skill"><span class="name">设计系统与组件化</span><span class="lv">Expert</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="services" id="services">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="eyebrow">Services</div>
-      <h2 class="sec-title">我能做什么</h2>
-    </div>
-    <div class="svc-grid">
-      <div class="svc"><div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.4 5.1 5.6.7-4.1 3.9 1 5.6L12 15.9 7.1 18.3l1-5.6L4 8.8l5.6-.7L12 3z"/></svg></div><h3>品牌视觉</h3><p>品牌定位、标志设计、VI 全案与品牌手册，建立统一而有记忆点的视觉识别。</p></div>
-      <div class="svc"><div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="13" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M8 9l2.5 2.5L15 7"/></svg></div><h3>数字体验</h3><p>产品界面、设计系统与交互动效，让复杂的产品变得清晰、愉悦、可用。</p></div>
-      <div class="svc"><div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19c-4 0-7-2.5-7-6.5C5 8 8 5 12 5s7 3 7 7.5c0 4-3 6.5-7 6.5z"/><circle cx="9.5" cy="11" r=".6" fill="currentColor"/><circle cx="14.5" cy="11" r=".6" fill="currentColor"/><path d="M9.8 14.2c1.4 1 3 1 4.4 0"/></svg></div><h3>插画与内容</h3><p>商业插画、编辑排版与内容视觉，为传播赋予独特的艺术气质。</p></div>
-      <div class="svc"><div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></div><h3>创意策略</h3><p>视觉方向的推演与定义，在动手之前，先想清楚它为什么长这样。</p></div>
-    </div>
-  </div>
-</section>
-<section class="contact" id="contact">
-  <div class="wrap">
-    <div class="eyebrow">Contact</div>
-    <h2 class="contact-title">有一个想法，<br>想聊聊吗？</h2>
-    <p class="contact-sub">无论是新品牌的起步，还是产品的重新出发，我都乐意倾听。通常我会在 48 小时内回复。</p>
-    <a class="btn" href="mailto:hello@linshe.design">hello@linshe.design<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
-    <div class="socials">
-      <a href="#" aria-label="小红书"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 4.2 4.6.5-3.4 3.1.9 4.6L12 13.3l-4 2.1.9-4.6-3.4-3.1 4.6-.5L12 3z"/></svg></a>
-      <a href="#" aria-label="Behance"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h6a2.5 2.5 0 010 5H3zM3 12h7a2.5 2.5 0 010 5H3z"/><circle cx="17.5" cy="9.5" r="1.2"/><path d="M14.5 14.5h6"/></svg></a>
-      <a href="#" aria-label="微信"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5.5C5.7 5.5 3 7.7 3 10.4c0 1.5.8 2.8 2 3.7l-.5 1.9 2.2-1.1c.7.2 1.4.4 2.3.4"/><path d="M15 14.6c2.9 0 5.5-2 5.5-4.5S17.9 5.6 15 5.6s-5.5 2-5.5 4.5 1.6 3.4 3.9 4.2l-.4 1.7 2-1c.5.1 1 .2 1.5.2z"/><circle cx="7.2" cy="9" r=".7" fill="currentColor"/><circle cx="11" cy="9" r=".7" fill="currentColor"/><circle cx="13.6" cy="13.6" r=".7" fill="currentColor"/><circle cx="17" cy="13.6" r=".7" fill="currentColor"/></svg></a>
-    </div>
-  </div>
-</section>
-</main>
-<footer class="footer">
-  <div class="wrap footer-inner">
-    <p>© 2026 林澈 · 视觉设计作品集</p>
-    <a class="up" href="#top">回到顶部<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></a>
-  </div>
-</footer>
-<script>
-const works=[{no:"01",title:"Aurora Coffee",cat:"品牌",img:"https://aka.doubaocdn.com/s/46ELMSVUJx",year:"2024",desc:"深绿咖啡品牌全案——标志、包装与物料系统的完整视觉体系。"},{no:"02",title:"Vanta Finance",cat:"数字",img:"https://aka.doubaocdn.com/s/uRZenBLncP",year:"2024",desc:"面向年轻用户的金融管理应用，深色界面与数据可视化设计。"},{no:"03",title:"山隐 · 山水系列",cat:"插画",img:"https://aka.doubaocdn.com/s/LrqbV37dks",year:"2023",desc:"以金绿设色的现代山水插画，探索传统水墨与现代图形的交融。"},{no:"04",title:"雨夜霓虹",cat:"摄影",img:"https://aka.doubaocdn.com/s/i8uXYtBUBW",year:"2023",desc:"城市雨夜街景的纪实影像，捕捉霓虹与倒影之间的情绪光影。"},{no:"05",title:"MONO 季刊",cat:"编辑",img:"https://aka.doubaocdn.com/s/iv03n9iUqg",year:"2022",desc:"时尚杂志的版式与装帧设计，建立持续而统一的视觉识别。"},{no:"06",title:"ORO 标识系统",cat:"品牌",img:"https://aka.doubaocdn.com/s/VTmTt18QFX",year:"2022",desc:"几何极简的品牌标志系统，覆盖全场景物料的应用延展。"},{no:"07",title:"流金 · 动态实验",cat:"动态",img:"https://aka.doubaocdn.com/s/zTBHFcCpCa",year:"2021",desc:"数字化动态视觉实验，金色粒子流在空间中的运动叙事。"}];
-const gallery=document.getElementById('gallery');
-gallery.innerHTML=works.map(function(w){return '<article class="work" data-cat="'+w.cat+'"><div class="work-fig"><span class="work-no">'+w.no+'</span><span class="work-cat">'+w.cat+'</span><img src="'+w.img+'" alt="'+w.title+'" loading="lazy"></div><div class="work-info"><span class="work-title">'+w.title+'</span><span class="work-year">'+w.year+'</span></div><p class="work-desc">'+w.desc+'</p></article>';}).join('');
-var filterBtns=document.querySelectorAll('#filters button');
-var workCards=document.querySelectorAll('.work');
-filterBtns.forEach(function(btn){btn.addEventListener('click',function(){filterBtns.forEach(function(b){b.classList.remove('active');});btn.classList.add('active');var f=btn.dataset.f;workCards.forEach(function(card){var show=(f==='all'||card.dataset.cat===f);card.classList.toggle('hide',!show);if(show){requestAnimationFrame(function(){card.classList.add('in');});}});});});
-var io=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
-document.querySelectorAll('.work, .sec-head, .about-grid, .svc, .contact-title, .contact-sub, .btn').forEach(function(el){if(!el.classList.contains('work')){el.style.opacity='0';}io.observe(el);});
-var nav=document.getElementById('nav');
-addEventListener('scroll',function(){nav.classList.toggle('scrolled',scrollY>40);},{passive:true});
-var burger=document.getElementById('burger');
-var navLinks=document.getElementById('navLinks');
-burger.addEventListener('click',function(){var open=navLinks.classList.toggle('open');burger.classList.toggle('open',open);burger.setAttribute('aria-expanded',open);document.body.style.overflow=open?'hidden':'';});
-navLinks.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){navLinks.classList.remove('open');burger.classList.remove('open');document.body.style.overflow='';});});
-</script>
-</body>
-</html>
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;nav class="nav" id="nav"&gt;
+  &lt;div class="wrap nav-inner"&gt;
+    &lt;a class="brand" href="#top"&gt;&lt;span id="brandName"&gt;黄建勋&lt;/span&gt;&lt;span class="dot"&gt;.&lt;/span&gt;&lt;small&gt;Portfolio&lt;/small&gt;&lt;/a&gt;
+    &lt;div class="nav-links" id="navLinks"&gt;
+      &lt;a href="#works"&gt;作品&lt;/a&gt;
+      &lt;a href="#about"&gt;关于&lt;/a&gt;
+      &lt;a href="#services"&gt;服务&lt;/a&gt;
+      &lt;a class="nav-cta" href="#contact"&gt;联系我&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;button class="burger" id="burger" aria-label="打开菜单" aria-expanded="false"&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+&lt;header class="hero" id="top"&gt;
+  &lt;div class="hero-bg"&gt;&lt;/div&gt;
+  &lt;div class="hero-inner"&gt;
+    &lt;div class="hero-eyebrow" id="heroRole"&gt;视觉设计师 · Visual Designer&lt;/div&gt;
+    &lt;h1 class="hero-title"&gt;&lt;span id="heroLine1"&gt;你好，我是黄建勋。&lt;/span&gt;&lt;br&gt;&lt;span class="em" id="heroLine2"&gt;以设计书写品牌的故事。&lt;/span&gt;&lt;/h1&gt;
+    &lt;p class="hero-sub" id="heroSub"&gt;我是一名专注品牌视觉与数字体验的独立设计师。过去 6 年，为 40+ 品牌打造令人难忘的视觉语言。&lt;/p&gt;
+    &lt;div class="hero-meta" id="heroTags"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="scroll-hint"&gt;&lt;span&gt;Scroll&lt;/span&gt;&lt;span class="line"&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;/header&gt;
+&lt;main&gt;
+&lt;section class="works" id="works"&gt;
+  &lt;div class="wrap"&gt;
+    &lt;div class="gallery-head"&gt;
+      &lt;div class="sec-head"&gt;
+        &lt;div class="eyebrow"&gt;Selected Works&lt;/div&gt;
+        &lt;h2 class="sec-title"&gt;精选作品&lt;/h2&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="filters" id="filters"&gt;&lt;/div&gt;
+    &lt;div class="gallery" id="gallery"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+&lt;section class="about" id="about"&gt;
+  &lt;div class="wrap"&gt;
+    &lt;div class="about-grid"&gt;
+      &lt;div class="about-body"&gt;
+        &lt;div class="eyebrow"&gt;About&lt;/div&gt;
+        &lt;h2 class="sec-title" id="aboutTitle" style="margin-bottom:30px;"&gt;设计，是克制地表达&lt;/h2&gt;
+        &lt;p class="lead" id="aboutLead"&gt;&lt;/p&gt;
+        &lt;div id="aboutBody"&gt;&lt;/div&gt;
+        &lt;div class="stats" id="stats"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="skills"&gt;
+        &lt;h3&gt;能力专长&lt;/h3&gt;
+        &lt;div id="skillList"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+&lt;section class="services" id="services"&gt;
+  &lt;div class="wrap"&gt;
+    &lt;div class="sec-head"&gt;
+      &lt;div class="eyebrow"&gt;Services&lt;/div&gt;
+      &lt;h2 class="sec-title"&gt;我能做什么&lt;/h2&gt;
+    &lt;/div&gt;
+    &lt;div class="svc-grid"&gt;
+      &lt;div class="svc"&gt;&lt;div class="svc-ic"&gt;&lt;svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;path d="M12 3l2.4 5.1 5.6.7-4.1 3.9 1 5.6L12 15.9 7.1 18.3l1-5.6L4 8.8l5.6-.7L12 3z"/&gt;&lt;/svg&gt;&lt;/div&gt;&lt;h3&gt;品牌视觉&lt;/h3&gt;&lt;p&gt;品牌定位、标志设计、VI 全案与品牌手册，建立统一而有记忆点的视觉识别。&lt;/p&gt;&lt;/div&gt;
+      &lt;div class="svc"&gt;&lt;div class="svc-ic"&gt;&lt;svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;rect x="4" y="4" width="16" height="13" rx="2"/&gt;&lt;path d="M8 21h8M12 17v4"/&gt;&lt;path d="M8 9l2.5 2.5L15 7"/&gt;&lt;/svg&gt;&lt;/div&gt;&lt;h3&gt;数字体验&lt;/h3&gt;&lt;p&gt;产品界面、设计系统与交互动效，让复杂的产品变得清晰、愉悦、可用。&lt;/p&gt;&lt;/div&gt;
+      &lt;div class="svc"&gt;&lt;div class="svc-ic"&gt;&lt;svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;path d="M12 19c-4 0-7-2.5-7-6.5C5 8 8 5 12 5s7 3 7 7.5c0 4-3 6.5-7 6.5z"/&gt;&lt;circle cx="9.5" cy="11" r=".6" fill="currentColor"/&gt;&lt;circle cx="14.5" cy="11" r=".6" fill="currentColor"/&gt;&lt;path d="M9.8 14.2c1.4 1 3 1 4.4 0"/&gt;&lt;/svg&gt;&lt;/div&gt;&lt;h3&gt;插画与内容&lt;/h3&gt;&lt;p&gt;商业插画、编辑排版与内容视觉，为传播赋予独特的艺术气质。&lt;/p&gt;&lt;/div&gt;
+      &lt;div class="svc"&gt;&lt;div class="svc-ic"&gt;&lt;svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/&gt;&lt;circle cx="12" cy="12" r="3"/&gt;&lt;/svg&gt;&lt;/div&gt;&lt;h3&gt;创意策略&lt;/h3&gt;&lt;p&gt;视觉方向的推演与定义，在动手之前，先想清楚它为什么长这样。&lt;/p&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+&lt;section class="contact" id="contact"&gt;
+  &lt;div class="wrap"&gt;
+    &lt;div class="eyebrow"&gt;Contact&lt;/div&gt;
+    &lt;h2 class="contact-title"&gt;有一个想法，&lt;br&gt;想聊聊吗？&lt;/h2&gt;
+    &lt;p class="contact-sub"&gt;无论是新品牌的起步，还是产品的重新出发，我都乐意倾听。通常我会在 48 小时内回复。&lt;/p&gt;
+    &lt;a class="btn" id="contactEmail" href="mailto:hello@linshe.design"&gt;hello@linshe.design&lt;svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;path d="M7 17L17 7M9 7h8v8"/&gt;&lt;/svg&gt;&lt;/a&gt;
+    &lt;div class="socials"&gt;
+      &lt;a href="#" aria-label="小红书"&gt;&lt;svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;path d="M12 3l1.9 4.2 4.6.5-3.4 3.1.9 4.6L12 13.3l-4 2.1.9-4.6-3.4-3.1 4.6-.5L12 3z"/&gt;&lt;/svg&gt;&lt;/a&gt;
+      &lt;a href="#" aria-label="Behance"&gt;&lt;svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;path d="M3 7h6a2.5 2.5 0 010 5H3zM3 12h7a2.5 2.5 0 010 5H3z"/&gt;&lt;circle cx="17.5" cy="9.5" r="1.2"/&gt;&lt;path d="M14.5 14.5h6"/&gt;&lt;/svg&gt;&lt;/a&gt;
+      &lt;a href="#" aria-label="微信"&gt;&lt;svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;path d="M9 5.5C5.7 5.5 3 7.7 3 10.4c0 1.5.8 2.8 2 3.7l-.5 1.9 2.2-1.1c.7.2 1.4.4 2.3.4"/&gt;&lt;path d="M15 14.6c2.9 0 5.5-2 5.5-4.5S17.9 5.6 15 5.6s-5.5 2-5.5 4.5 1.6 3.4 3.9 4.2l-.4 1.7 2-1c.5.1 1 .2 1.5.2z"/&gt;&lt;circle cx="7.2" cy="9" r=".7" fill="currentColor"/&gt;&lt;circle cx="11" cy="9" r=".7" fill="currentColor"/&gt;&lt;circle cx="13.6" cy="13.6" r=".7" fill="currentColor"/&gt;&lt;circle cx="17" cy="13.6" r=".7" fill="currentColor"/&gt;&lt;/svg&gt;&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+&lt;/main&gt;
+&lt;footer class="footer"&gt;
+  &lt;div class="wrap footer-inner"&gt;
+    &lt;p&gt;© 2026 &lt;span id="footName"&gt;黄建勋&lt;/span&gt; · 视觉设计作品集&lt;/p&gt;
+    &lt;div class="foot-links"&gt;
+      &lt;a class="admin-link" href="#" id="openAdmin"&gt;作品管理&lt;/a&gt;
+      &lt;a class="up" href="#top"&gt;回到顶部&lt;svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;path d="M12 19V5M5 12l7-7 7 7"/&gt;&lt;/svg&gt;&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;
+&lt;div class="admin" id="admin"&gt;
+  &lt;div class="admin-top"&gt;
+    &lt;div class="admin-top-inner"&gt;
+      &lt;h2&gt;作品集管理 &lt;span class="tag"&gt;仅自己可见&lt;/span&gt;&lt;/h2&gt;
+      &lt;div class="admin-actions"&gt;
+        &lt;span class="a-status" id="saveStatus"&gt;&lt;/span&gt;
+        &lt;button class="a-btn" id="previewBtn"&gt;预览前台&lt;/button&gt;
+        &lt;button class="a-btn solid" id="saveBtn"&gt;保存并发布&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="admin-body"&gt;
+    &lt;div class="admin-tabs"&gt;
+      &lt;button class="active" data-tab="works"&gt;作品管理&lt;/button&gt;
+      &lt;button data-tab="profile"&gt;个人信息&lt;/button&gt;
+      &lt;button data-tab="connect"&gt;连接设置&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="a-panel show" id="tab-works"&gt;
+      &lt;div class="a-note"&gt;在这里&lt;b&gt;添加 / 编辑 / 删除&lt;/b&gt;作品。点击「保存并发布」后，公网网站会在 1-2 分钟内自动更新。图片支持粘贴网络链接，或点击「上传图片」从本地上传（将存到你的仓库 images 目录）。&lt;/div&gt;
+      &lt;div id="workList"&gt;&lt;/div&gt;
+      &lt;button class="a-btn solid" id="addWorkBtn" style="width:100%;padding:14px;"&gt;+ 新增作品&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="a-panel" id="tab-profile"&gt;
+      &lt;div class="a-note"&gt;编辑&lt;b&gt;个人基本信息&lt;/b&gt;与&lt;b&gt;关于我&lt;/b&gt;的内容，保存后前台同步更新。&lt;/div&gt;
+      &lt;div class="a-card"&gt;
+        &lt;div class="a-card-head"&gt;&lt;span class="t"&gt;基本信息&lt;/span&gt;&lt;/div&gt;
+        &lt;div class="a-row"&gt;
+          &lt;div class="a-field"&gt;&lt;label&gt;姓名&lt;/label&gt;&lt;input id="pName" placeholder="你的名字"&gt;&lt;/div&gt;
+          &lt;div class="a-field"&gt;&lt;label&gt;角色（眉标）&lt;/label&gt;&lt;input id="pRole" placeholder="视觉设计师 · Visual Designer"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="a-field"&gt;&lt;label&gt;主标题第一行&lt;/label&gt;&lt;input id="pHero1" placeholder="你好，我是…"&gt;&lt;/div&gt;
+        &lt;div class="a-field"&gt;&lt;label&gt;主标题第二行（金色强调）&lt;/label&gt;&lt;input id="pHero2" placeholder="以设计书写品牌的故事。"&gt;&lt;/div&gt;
+        &lt;div class="a-field"&gt;&lt;label&gt;副标题&lt;/label&gt;&lt;textarea id="pHeroSub"&gt;&lt;/textarea&gt;&lt;/div&gt;
+        &lt;div class="a-field"&gt;&lt;label&gt;联系邮箱&lt;/label&gt;&lt;input id="pEmail" placeholder="hello@example.com"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="a-card"&gt;
+        &lt;div class="a-card-head"&gt;&lt;span class="t"&gt;关于我&lt;/span&gt;&lt;/div&gt;
+        &lt;div class="a-field"&gt;&lt;label&gt;关于区块标题&lt;/label&gt;&lt;input id="pAboutTitle" placeholder="设计，是克制地表达"&gt;&lt;/div&gt;
+        &lt;div class="a-field"&gt;&lt;label&gt;引导句（大字）&lt;/label&gt;&lt;textarea id="pAboutLead"&gt;&lt;/textarea&gt;&lt;/div&gt;
+        &lt;div class="a-field"&gt;&lt;label&gt;正文段落（每行一段）&lt;/label&gt;&lt;textarea id="pAboutBody" placeholder="第一段&#10;第二段"&gt;&lt;/textarea&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="a-card"&gt;
+        &lt;div class="a-card-head"&gt;&lt;span class="t"&gt;数据统计（数字 / 标签，三组）&lt;/span&gt;&lt;/div&gt;
+        &lt;div class="a-row"&gt;
+          &lt;div class="a-field"&gt;&lt;label&gt;数字 1&lt;/label&gt;&lt;input id="pStat1n"&gt;&lt;div class="hint"&gt;标签：&lt;input id="pStat1l" style="margin-top:4px;"&gt;&lt;/div&gt;&lt;/div&gt;
+          &lt;div class="a-field"&gt;&lt;label&gt;数字 2&lt;/label&gt;&lt;input id="pStat2n"&gt;&lt;div class="hint"&gt;标签：&lt;input id="pStat2l" style="margin-top:4px;"&gt;&lt;/div&gt;&lt;/div&gt;
+          &lt;div class="a-field"&gt;&lt;label&gt;数字 3&lt;/label&gt;&lt;input id="pStat3n"&gt;&lt;div class="hint"&gt;标签：&lt;input id="pStat3l" style="margin-top:4px;"&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="a-card"&gt;
+        &lt;div class="a-card-head"&gt;&lt;span class="t"&gt;能力专长（每行：名称 | 等级）&lt;/span&gt;&lt;/div&gt;
+        &lt;div class="a-field"&gt;&lt;label&gt;技能列表（每行一条，格式「名称 | 等级」）&lt;/label&gt;&lt;textarea id="pSkills"&gt;&lt;/textarea&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="a-panel" id="tab-connect"&gt;
+      &lt;div class="a-note"&gt;为了让修改能&lt;b&gt;自动发布到公网&lt;/b&gt;，需要连接你的 GitHub 仓库。只需配置一次，之后保存即自动更新。&lt;/div&gt;
+      &lt;div class="a-card"&gt;
+        &lt;div class="a-card-head"&gt;&lt;span class="t"&gt;GitHub 连接&lt;/span&gt;&lt;/div&gt;
+        &lt;div class="a-field"&gt;
+          &lt;label&gt;Personal Access Token&lt;/label&gt;
+          &lt;input id="ghToken" type="password" placeholder="github_pat_… 或 ghp_…"&gt;
+          &lt;div class="hint"&gt;获取方式：GitHub → Settings → Developer settings → Personal access tokens → Generate new token（classic），勾选 repo 权限即可。Token 仅保存在你浏览器的本地存储中，不会上传到任何服务器。&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="a-row"&gt;
+          &lt;div class="a-field"&gt;&lt;label&gt;仓库 Owner&lt;/label&gt;&lt;input id="ghOwner" placeholder="ZFLY01"&gt;&lt;/div&gt;
+          &lt;div class="a-field"&gt;&lt;label&gt;仓库名&lt;/label&gt;&lt;input id="ghRepo" placeholder="ZFLY01.github.io"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div style="display:flex;gap:10px;flex-wrap:wrap;"&gt;
+          &lt;button class="a-btn" id="testConnBtn"&gt;测试连接&lt;/button&gt;
+          &lt;button class="a-btn" id="saveConnBtn"&gt;保存连接&lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="a-card" id="workForm" style="display:none;"&gt;
+      &lt;div class="a-card-head"&gt;
+        &lt;span class="t" id="workFormTitle"&gt;新增作品&lt;/span&gt;
+        &lt;button class="a-mini" id="cancelWorkForm"&gt;取消&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div class="a-row"&gt;
+        &lt;div class="a-field"&gt;&lt;label&gt;作品标题&lt;/label&gt;&lt;input id="wTitle"&gt;&lt;/div&gt;
+        &lt;div class="a-field"&gt;&lt;label&gt;分类&lt;/label&gt;&lt;select id="wCat"&gt;
+          &lt;option value="品牌"&gt;品牌&lt;/option&gt;
+          &lt;option value="数字"&gt;数字体验&lt;/option&gt;
+          &lt;option value="插画"&gt;插画&lt;/option&gt;
+          &lt;option value="摄影"&gt;摄影&lt;/option&gt;
+          &lt;option value="编辑"&gt;编辑设计&lt;/option&gt;
+          &lt;option value="动态"&gt;动态&lt;/option&gt;
+          &lt;option value="其他"&gt;其他&lt;/option&gt;
+        &lt;/select&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="a-row"&gt;
+        &lt;div class="a-field"&gt;&lt;label&gt;年份&lt;/label&gt;&lt;input id="wYear" placeholder="2024"&gt;&lt;/div&gt;
+        &lt;div class="a-field"&gt;&lt;label&gt;图片链接（URL）&lt;/label&gt;&lt;input id="wImg" placeholder="https://… 或留空后上传"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="a-field"&gt;
+        &lt;label&gt;或从本地上传图片&lt;/label&gt;
+        &lt;input type="file" id="wImgFile" accept="image/*" style="padding:8px;border:1px dashed var(--line);background:var(--ink);"&gt;
+        &lt;div class="upload-preview" id="wImgPreviewWrap" style="display:none;"&gt;&lt;img id="wImgPreview" alt="预览"&gt;&lt;button class="a-mini" id="wImgRemove"&gt;移除&lt;/button&gt;&lt;/div&gt;
+        &lt;div class="hint"&gt;上传后将保存到仓库 images/ 目录并自动填入链接；建议图片宽度 800px 以上、竖版 4:5 效果最佳。&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="a-field"&gt;&lt;label&gt;作品描述&lt;/label&gt;&lt;textarea id="wDesc"&gt;&lt;/textarea&gt;&lt;/div&gt;
+      &lt;button class="a-btn solid" id="saveWorkBtn"&gt;保存此作品&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+var DEFAULT_DATA={name:"黄建勋",role:"视觉设计师 · Visual Designer",heroLine1:"你好，我是黄建勋。",heroLine2:"以设计书写品牌的故事。",heroSub:"我是一名专注品牌视觉与数字体验的独立设计师。过去 6 年，为 40+ 品牌打造令人难忘的视觉语言——从一枚标志，到一整套可生长的设计系统。",heroTags:["品牌视觉","UI / UX","插画与动态","创意策略"],email:"hello@linshe.design",aboutTitle:"设计，是克制地表达",aboutLead:"我相信最好的设计往往不说太多，却让人过目不忘。它源于对问题的深刻理解，以及恰到好处的取舍。",aboutBody:["我在广州工作与生活，先后服务于品牌工作室与互联网团队，后成为独立设计师。我的工作横跨品牌视觉、数字界面与动态设计，习惯从策略出发，让美学服务于商业与体验。","对我来说，每个项目都是一次重新出发——理解行业的语言，找到属于它的视觉印记，再把它做成一套能够自我生长的系统。"],stats:[{num:"6",label:"年经验"},{num:"40+",label:"合作品牌"},{num:"12",label:"项设计奖项"}],skills:[{name:"品牌视觉与 VI 系统",lv:"Expert"},{name:"产品 UI / UX 设计",lv:"Advanced"},{name:"商业插画与编辑设计",lv:"Advanced"},{name:"动态视觉与动效",lv:"Advanced"},{name:"设计系统与组件化",lv:"Expert"}],works:[{no:"01",title:"Aurora Coffee",cat:"品牌",img:"https://aka.doubaocdn.com/s/46ELMSVUJx",year:"2024",desc:"深绿咖啡品牌全案——标志、包装与物料系统的完整视觉体系。"},{no:"02",title:"Vanta Finance",cat:"数字",img:"https://aka.doubaocdn.com/s/uRZenBLncP",year:"2024",desc:"面向年轻用户的金融管理应用，深色界面与数据可视化设计。"},{no:"03",title:"山隐 · 山水系列",cat:"插画",img:"https://aka.doubaocdn.com/s/LrqbV37dks",year:"2023",desc:"以金绿设色的现代山水插画，探索传统水墨与现代图形的交融。"},{no:"04",title:"雨夜霓虹",cat:"摄影",img:"https://aka.doubaocdn.com/s/i8uXYtBUBW",year:"2023",desc:"城市雨夜街景的纪实影像，捕捉霓虹与倒影之间的情绪光影。"},{no:"05",title:"MONO 季刊",cat:"编辑",img:"https://aka.doubaocdn.com/s/iv03n9iUqg",year:"2022",desc:"时尚杂志的版式与装帧设计，建立持续而统一的视觉识别。"},{no:"06",title:"ORO 标识系统",cat:"品牌",img:"https://aka.doubaocdn.com/s/VTmTt18QFX",year:"2022",desc:"几何极简的品牌标志系统，覆盖全场景物料的应用延展。"},{no:"07",title:"流金 · 动态实验",cat:"动态",img:"https://aka.doubaocdn.com/s/zTBHFcCpCa",year:"2021",desc:"数字化动态视觉实验，金色粒子流在空间中的运动叙事。"}]};
+var DATA=null,editIndex=-1,pendingUpload=null;
+function loadData(cb){fetch('data.json',{cache:'no-store'}).then(function(r){if(!r.ok)throw new Error('no data.json');return r.json();}).then(function(d){DATA=d;cb();}).catch(function(){DATA=JSON.parse(JSON.stringify(DEFAULT_DATA));cb();});}
+function renderAll(){
+document.title=DATA.name+' · 视觉设计师作品集';
+document.getElementById('brandName').textContent=DATA.name;
+document.getElementById('footName').textContent=DATA.name;
+document.getElementById('heroRole').textContent=DATA.role;
+document.getElementById('heroLine1').textContent=DATA.heroLine1;
+document.getElementById('heroLine2').textContent=DATA.heroLine2;
+document.getElementById('heroSub').textContent=DATA.heroSub;
+document.getElementById('aboutTitle').textContent=DATA.aboutTitle;
+document.getElementById('aboutLead').textContent=DATA.aboutLead;
+var em=document.getElementById('contactEmail');em.href='mailto:'+DATA.email;em.firstChild.textContent=DATA.email;
+document.getElementById('heroTags').innerHTML=(DATA.heroTags||[]).map(function(t){return '&lt;span&gt;'+t+'&lt;/span&gt;';}).join('');
+document.getElementById('aboutBody').innerHTML=(DATA.aboutBody||[]).map(function(p){return '&lt;p&gt;'+p+'&lt;/p&gt;';}).join('');
+document.getElementById('stats').innerHTML=(DATA.stats||[]).map(function(s){return '&lt;div class="stat"&gt;&lt;b&gt;'+s.num+'&lt;/b&gt;&lt;span&gt;'+s.label+'&lt;/span&gt;&lt;/div&gt;';}).join('');
+document.getElementById('skillList').innerHTML=(DATA.skills||[]).map(function(s){return '&lt;div class="skill"&gt;&lt;span class="name"&gt;'+s.name+'&lt;/span&gt;&lt;span class="lv"&gt;'+s.lv+'&lt;/span&gt;&lt;/div&gt;';}).join('');
+var cats={};(DATA.works||[]).forEach(function(w){cats[w.cat]=true;});
+var fh='&lt;button class="active" data-f="all"&gt;全部&lt;/button&gt;';Object.keys(cats).forEach(function(c){fh+='&lt;button data-f="'+c+'"&gt;'+c+'&lt;/button&gt;';});
+document.getElementById('filters').innerHTML=fh;
+renderGallery();bindFilters();initReveal();
+}
+function renderGallery(){var g=document.getElementById('gallery');g.innerHTML=(DATA.works||[]).map(function(w,i){return '&lt;article class="work" data-cat="'+w.cat+'" data-idx="'+i+'"&gt;&lt;div class="work-fig"&gt;&lt;span class="work-no"&gt;'+w.no+'&lt;/span&gt;&lt;span class="work-cat"&gt;'+w.cat+'&lt;/span&gt;&lt;img src="'+w.img+'" alt="'+w.title+'" loading="lazy"&gt;&lt;/div&gt;&lt;div class="work-info"&gt;&lt;span class="work-title"&gt;'+w.title+'&lt;/span&gt;&lt;span class="work-year"&gt;'+w.year+'&lt;/span&gt;&lt;/div&gt;&lt;p class="work-desc"&gt;'+w.desc+'&lt;/p&gt;&lt;/article&gt;';}).join('');}
+function bindFilters(){var btns=document.querySelectorAll('#filters button');btns.forEach(function(btn){btn.addEventListener('click',function(){btns.forEach(function(b){b.classList.remove('active');});btn.classList.add('active');var f=btn.dataset.f;document.querySelectorAll('.work').forEach(function(card){var show=(f==='all'||card.dataset.cat===f);card.classList.toggle('hide',!show);if(show)requestAnimationFrame(function(){card.classList.add('in');});});});});}
+var ioReveal=null;
+function initReveal(){if(ioReveal)ioReveal.disconnect();ioReveal=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');ioReveal.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.work').forEach(function(el){if(!el.classList.contains('in'))ioReveal.observe(el);});document.querySelectorAll('.sec-head,.about-grid,.svc,.contact-title,.contact-sub,.btn').forEach(function(el){ioReveal.observe(el);});}
+var nav=document.getElementById('nav');addEventListener('scroll',function(){nav.classList.toggle('scrolled',scrollY&gt;40);},{passive:true});
+var burger=document.getElementById('burger');var navLinks=document.getElementById('navLinks');burger.addEventListener('click',function(){var open=navLinks.classList.toggle('open');burger.classList.toggle('open',open);burger.setAttribute('aria-expanded',open);document.body.style.overflow=open?'hidden':'';});navLinks.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){navLinks.classList.remove('open');burger.classList.remove('open');document.body.style.overflow='';});});
+var admin=document.getElementById('admin');var saveStatus=document.getElementById('saveStatus');
+function showStatus(msg,ok){saveStatus.textContent=msg;saveStatus.className='a-status '+(ok?'ok':'err');}
+function openAdmin(){admin.classList.add('show');document.body.style.overflow='hidden';fillProfileForm();renderWorkList();fillConnForm();switchTab('works');saveStatus.className='a-status';saveStatus.textContent='';}
+document.getElementById('openAdmin').addEventListener('click',function(e){e.preventDefault();openAdmin();});
+document.getElementById('previewBtn').addEventListener('click',closeAdmin);
+function closeAdmin(){admin.classList.remove('show');document.body.style.overflow='';}
+document.querySelectorAll('.admin-tabs button').forEach(function(btn){btn.addEventListener('click',function(){switchTab(btn.dataset.tab);});});
+function switchTab(tab){document.querySelectorAll('.admin-tabs button').forEach(function(b){b.classList.toggle('active',b.dataset.tab===tab);});document.querySelectorAll('.a-panel').forEach(function(p){p.classList.toggle('show',p.id==='tab-'+tab);});}
+function renderWorkList(){var box=document.getElementById('workList');if(!DATA.works.length){box.innerHTML='&lt;div class="a-note"&gt;还没有作品，点击下方「新增作品」添加第一件。&lt;/div&gt;';return;}box.innerHTML=DATA.works.map(function(w,i){return '&lt;div class="a-work-row"&gt;'+(w.img?'&lt;img class="work-thumb" src="'+w.img+'" alt=""&gt;':'&lt;div class="work-thumb" style="background:var(--ink-3);"&gt;&lt;/div&gt;')+'&lt;div class="info"&gt;&lt;b&gt;'+w.title+'&lt;/b&gt;&lt;span&gt;'+w.cat+' · '+w.year+'&lt;/span&gt;&lt;/div&gt;&lt;div class="a-card-ops"&gt;&lt;button class="a-mini" data-move="up" data-i="'+i+'">上移&lt;/button&gt;&lt;button class="a-mini" data-move="down" data-i="'+i+'">下移&lt;/button&gt;&lt;button class="a-mini" data-edit="'+i+'">编辑&lt;/button&gt;&lt;button class="a-mini danger" data-del="'+i+'">删除&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;';}).join('');box.querySelectorAll('[data-edit]').forEach(function(b){b.addEventListener('click',function(){openWorkForm(parseInt(b.dataset.edit,10));});});box.querySelectorAll('[data-del]').forEach(function(b){b.addEventListener('click',function(){var i=parseInt(b.dataset.del,10);if(confirm('确定删除「'+DATA.works[i].title+'」？')){DATA.works.splice(i,1);renumber();renderWorkList();renderGallery();}});});box.querySelectorAll('[data-move]').forEach(function(b){b.addEventListener('click',function(){var i=parseInt(b.dataset.i,10),j=(b.dataset.move==='up'?i-1:i+1);if(j&lt;0||j&gt;=DATA.works.length)return;var t=DATA.works[i];DATA.works[i]=DATA.works[j];DATA.works[j]=t;renumber();renderWorkList();renderGallery();});});}
+function renumber(){DATA.works.forEach(function(w,i){w.no=String(i+1).padStart(2,'0');});}
+document.getElementById('addWorkBtn').addEventListener('click',function(){openWorkForm(-1);});
+function openWorkForm(i){editIndex=i;document.getElementById('workForm').style.display='block';document.getElementById('workFormTitle').textContent=(i&lt;0)?'新增作品':'编辑作品';var w=(i&gt;=0)?DATA.works[i]:{title:'',cat:'品牌',year:new Date().getFullYear()+'',img:'',desc:''};document.getElementById('wTitle').value=w.title||'';document.getElementById('wCat').value=w.cat||'品牌';document.getElementById('wYear').value=w.year||'';document.getElementById('wImg').value=w.img||'';document.getElementById('wDesc').value=w.desc||'';document.getElementById('wImgFile').value='';pendingUpload=null;updateUploadPreview();document.getElementById('workForm').scrollIntoView({behavior:'smooth',block:'start'});}
+document.getElementById('cancelWorkForm').addEventListener('click',function(){document.getElementById('workForm').style.display='none';});
+document.getElementById('saveWorkBtn').addEventListener('click',function(){var title=document.getElementById('wTitle').value.trim();var img=document.getElementById('wImg').value.trim();if(!title){alert('请填写作品标题');return;}var obj={no:(editIndex&gt;=0?DATA.works[editIndex].no:String(DATA.works.length+1).padStart(2,'0')),title:title,cat:document.getElementById('wCat').value,year:document.getElementById('wYear').value.trim(),img:img,desc:document.getElementById('wDesc').value.trim()};if(editIndex&gt;=0){DATA.works[editIndex]=obj;}else{DATA.works.push(obj);renumber();}renderWorkList();renderGallery();document.getElementById('workForm').style.display='none';showStatus('已在草稿中更新，记得点击右上角「保存并发布」。',true);});
+document.getElementById('wImgFile').addEventListener('change',function(e){var file=e.target.files[0];if(!file)return;var reader=new FileReader();reader.onload=function(){pendingUpload={name:file.name.replace(/[^\w.\-]/g,'_'),data:reader.result};updateUploadPreview();};reader.readAsDataURL(file);});
+function updateUploadPreview(){var wrap=document.getElementById('wImgPreviewWrap');if(pendingUpload){wrap.style.display='flex';document.getElementById('wImgPreview').src=pendingUpload.data;}else{wrap.style.display='none';}}
+document.getElementById('wImgRemove').addEventListener('click',function(){pendingUpload=null;document.getElementById('wImgFile').value='';updateUploadPreview();});
+function fillProfileForm(){document.getElementById('pName').value=DATA.name||'';document.getElementById('pRole').value=DATA.role||'';document.getElementById('pHero1').value=DATA.heroLine1||'';document.getElementById('pHero2').value=DATA.heroLine2||'';document.getElementById('pHeroSub').value=DATA.heroSub||'';document.getElementById('pEmail').value=DATA.email||'';document.getElementById('pAboutTitle').value=DATA.aboutTitle||'';document.getElementById('pAboutLead').value=DATA.aboutLead||'';document.getElementById('pAboutBody').value=(DATA.aboutBody||[]).join('\n');var st=DATA.stats||[];document.getElementById('pStat1n').value=(st[0]&amp;&amp;st[0].num)||'';document.getElementById('pStat1l').value=(st[0]&amp;&amp;st[0].label)||'';document.getElementById('pStat2n').value=(st[1]&amp;&amp;st[1].num)||'';document.getElementById('pStat2l').value=(st[1]&amp;&amp;st[1].label)||'';document.getElementById('pStat3n').value=(st[2]&amp;&amp;st[2].num)||'';document.getElementById('pStat3l').value=(st[2]&amp;&amp;st[2].label)||'';document.getElementById('pSkills').value=(DATA.skills||[]).map(function(s){return s.name+' | '+s.lv;}).join('\n');}
+function collectProfile(){DATA.name=document.getElementById('pName').value.trim()||DATA.name;DATA.role=document.getElementById('pRole').value.trim();DATA.heroLine1=document.getElementById('pHero1').value.trim();DATA.heroLine2=document.getElementById('pHero2').value.trim();DATA.heroSub=document.getElementById('pHeroSub').value.trim();DATA.email=document.getElementById('pEmail').value.trim();DATA.aboutTitle=document.getElementById('pAboutTitle').value.trim();DATA.aboutLead=document.getElementById('pAboutLead').value.trim();DATA.aboutBody=document.getElementById('pAboutBody').value.split('\n').map(function(s){return s.trim();}).filter(Boolean);DATA.stats=[{num:document.getElementById('pStat1n').value.trim(),label:document.getElementById('pStat1l').value.trim()},{num:document.getElementById('pStat2n').value.trim(),label:document.getElementById('pStat2l').value.trim()},{num:document.getElementById('pStat3n').value.trim(),label:document.getElementById('pStat3l').value.trim()}];DATA.skills=document.getElementById('pSkills').value.split('\n').map(function(s){var p=s.split('|');return{name:(p[0]||'').trim(),lv:(p[1]||'Expert').trim()};}).filter(function(s){return s.name;});}
+function fillConnForm(){var c=getConn();document.getElementById('ghToken').value=c.token||'';document.getElementById('ghOwner').value=c.owner||'';document.getElementById('ghRepo').value=c.repo||'';}
+function getConn(){try{return JSON.parse(localStorage.getItem('pf_conn')||'{}');}catch(e){return{};}}
+function saveConn(){var c={token:document.getElementById('ghToken').value.trim(),owner:document.getElementById('ghOwner').value.trim(),repo:document.getElementById('ghRepo').value.trim()};localStorage.setItem('pf_conn',JSON.stringify(c));return c;}
+document.getElementById('saveConnBtn').addEventListener('click',function(){saveConn();showStatus('连接信息已保存到本浏览器。',true);});
+document.getElementById('testConnBtn').addEventListener('click',function(){var c=saveConn();if(!c.token){showStatus('请先填写 Personal Access Token。',false);return;}fetch('https://api.github.com/user',{headers:{Authorization:'Bearer '+c.token}}).then(function(r){if(!r.ok)throw new Error(r.status);return r.json();}).then(function(u){if(c.owner&amp;&amp;u.login!==c.owner){showStatus('Token 有效，但所属用户为 '+u.login+'，与填写的 Owner 不一致。',false);return;}showStatus('连接成功：已登录为 '+u.login+'。',true);}).catch(function(){showStatus('连接失败：Token 无效或网络异常。',false);});});
+document.getElementById('saveBtn').addEventListener('click',function(){collectProfile();saveAll();});
+function saveAll(){var c=getConn();if(!c.token){showStatus('请先在「连接设置」中填写 GitHub Token 并保存。',false);return;}saveStatus.textContent='正在更新仓库…';saveStatus.className='a-status ok';var uploadTasks=[];if(pendingUpload){var b64=pendingUpload.data.split(',')[1];var fname='images/'+Date.now()+'-'+pendingUpload.name;uploadTasks.push(fetch('https://api.github.com/repos/'+c.owner+'/'+c.repo+'/contents/'+fname,{method:'PUT',headers:{Authorization:'Bearer '+c.token,Accept:'application/vnd.github+json'},body:JSON.stringify({message:'upload work image',content:b64})}).then(function(r){if(!r.ok)throw new Error('图片上传失败');return r.json();}).then(function(){return 'https://raw.githubusercontent.com/'+c.owner+'/'+c.repo+'/main/'+fname;}));}
+Promise.all(uploadTasks).then(function(urls){if(urls.length){if(editIndex&gt;=0){DATA.works[editIndex].img=urls[0];}else{var last=DATA.works[DATA.works.length-1];if(last&amp;&amp;!last.img)last.img=urls[0];}}
+return getFileSha(c).then(function(sha){var content=JSON.stringify(DATA,null,2);return fetch('https://api.github.com/repos/'+c.owner+'/'+c.repo+'/contents/data.json',{method:'PUT',headers:{Authorization:'Bearer '+c.token,Accept:'application/vnd.github+json'},body:JSON.stringify({message:'更新作品集内容',content:btoa(unescape(encodeURIComponent(content))),sha:sha||undefined})});});}).then(function(r){if(!r.ok){return r.json().then(function(e){throw new Error(e.message||'保存失败');});}showStatus('保存成功！公网网站将在 1-2 分钟内自动更新。',true);}).catch(function(err){showStatus('保存失败：'+err.message,false);});}
+function getFileSha(c){return fetch('https://api.github.com/repos/'+c.owner+'/'+c.repo+'/contents/data.json',{headers:{Authorization:'Bearer '+c.token,Accept:'application/vnd.github+json'}}).then(function(r){if(r.status===404)return null;if(!r.ok)throw new Error('读取仓库失败');return r.json().then(function(j){return j.sha;});});}
+loadData(function(){renderAll();});
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
